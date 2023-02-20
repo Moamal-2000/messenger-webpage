@@ -1,0 +1,831 @@
+/* Global [Start] */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+}
+
+:root {
+  --text-color: #434343;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+i {
+  user-select: none;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  height: 100%;
+}
+
+/* Global [End] */
+
+
+
+
+
+/* Friends Section [Start] */
+
+.friends-section {
+  background-color: #007aff;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 350px;
+  width: 350px;
+  z-index: 100;
+  height: 100%;
+  transition: .7s;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -ms-transition: .7s;
+  -o-transition: .7s;
+}
+
+@media (max-width: 992px) {
+  .friends-section {
+    position: absolute;
+    left: -400px;
+    top: 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .friends-section {
+    width: 100%;
+  }
+}
+
+.friends-section .settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 24px;
+}
+
+.friends-section .settings .name-website {
+  font-weight: 500;
+  font-size: 28px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.friends-section .settings .name-website a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.friends-section .settings .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.friends-section .settings .icons i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.friends-section .settings .icons i.close {
+  font-size: 24px;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .friends-section .settings .icons i.close {
+    display: block;
+  }
+}
+
+.friends-section .search-input {
+  background-color: #3596ff;
+  padding: 12px 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 24px;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.friends-section .search-input:hover {
+  box-shadow: 0 0 12px -6px #e9e9e9;
+}
+
+.friends-section .search-input i {
+  color: #70b5fe;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.friends-section .search-input:hover i {
+  color: #b5d9ff;
+}
+
+.friends-section .search-input input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.friends-section .search-input input::placeholder {
+  color: #fff;
+}
+
+.friends-section .search-input input:focus {
+  outline: none;
+}
+
+.friends-section .more-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 24px;
+}
+
+.friends-section .more-options i {
+  font-size: 20px;
+  opacity: .6;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.friends-section .more-options i:hover {
+  opacity: .8;
+}
+
+.friends-section .more-options i.active {
+  opacity: .98;
+}
+
+.friends-section .friends-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.friends-section .friends-menu .friend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.friends-section .friends-menu .friend:hover {
+  background-color: #3597ff5e;
+}
+
+.friends-section .friends-menu .friend .container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.friends-section .friends-menu .friend::before {
+  content: '';
+  position: absolute;
+  left: 60px;
+  bottom: 17px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.friends-section .friends-menu .friend.online::before {
+  background-color: #79e201;
+}
+
+.friends-section .friends-menu .friend.sleep::before {
+  background-color: #f88705;
+}
+
+.friends-section .friends-menu .friend.selected {
+  background-color: #3596ff;
+}
+
+.friends-section .friends-menu .friend.dont-disturb::before {
+  background-color: #ec2b3b;
+}
+
+.friends-section .friends-menu .friend.offline {
+  background-color: transparent;
+}
+
+.friends-section .friends-menu .friend .friend-picture {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.friends-section .friends-menu .friend .friend-picture img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.friends-section .friends-menu .friend .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.friends-section .friends-menu .friend .content .friend-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.friends-section .friends-menu .friend .content .last-message {
+  font-size: 13px;
+  font-size: 800;
+  color: #e9e9e9;
+}
+
+.friends-section .friends-menu .friend .number-of-messages {
+  display: block;
+  background-color: #fff;
+  color: #007aff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Friends Section [End] */
+
+
+
+
+
+
+
+/* chat-section [Start] */
+
+.main-chat-section {
+  background-color: #f8f9fb;
+  width: 100%;
+}
+
+.main-chat-section .top-side {
+  background-color: #f8f9fb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0px 5px 20px -12px #848484;
+}
+
+@media (max-width: 376px) {
+  .main-chat-section .top-side {
+    padding: 10px;
+  }
+}
+
+.main-chat-section .top-side .selected-friend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-chat-section .top-side .selected-friend i {
+  font-size: 24px;
+  margin-right: 80px;
+  color: #000;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  display: none;
+}
+
+
+@media (max-width: 992px) {
+  .main-chat-section .top-side .selected-friend i {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-chat-section .top-side .selected-friend i {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  .main-chat-section .top-side .selected-friend i {
+    margin-right: 0;
+  }
+}
+
+.main-chat-section .top-side .selected-friend i:hover {
+  opacity: 0.4;
+}
+
+.main-chat-section .top-side .selected-friend .state {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #79e201;
+}
+
+.top-side .selected-friend .friend-name {
+  font-size: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-side .selected-friend .friend-name {
+    font-size: 24px;
+  }
+}
+
+.main-chat-section .top-side .call-options {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.main-chat-section .top-side .call-options i {
+  color: #fff;
+  background-color: #007aff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.main-chat-section .top-side .call-options i:hover {
+  opacity: .8;
+}
+
+.main-chat-section .chat {
+  padding: 20px;
+  height: calc(100% - 140px);
+  overflow-x: auto;
+}
+
+.main-chat-section .chat::-webkit-scrollbar {
+  background-color: #e9e9e9;
+  width: 10px;
+}
+
+.main-chat-section .chat::-webkit-scrollbar-thumb {
+  background-color: #848484;
+}
+
+.chat .user-message {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 6px;
+}
+
+.chat .user-message .info-message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chat .user-message .info-message .date-message {
+  margin-left: -7px;
+}
+
+.chat .user-message .info-message {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.chat .user-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat .user-picture img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.chat .user-message .info-message .date-message {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  transform: scale(0.8) translateX(10px);
+  -webkit-transform: scale(0.8) translateX(10px);
+  -moz-transform: scale(0.8) translateX(10px);
+  -ms-transform: scale(0.8) translateX(10px);
+  -o-transform: scale(0.8) translateX(10px);
+}
+
+.chat .user-message .the-message {
+  background-color: #eaeaea;
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 6px 6px 0 6px;
+  -webkit-border-radius: 6px 6px 0 6px;
+  -moz-border-radius: 6px 6px 0 6px;
+  -ms-border-radius: 6px 6px 0 6px;
+  -o-border-radius: 6px 6px 0 6px;
+  margin-bottom: 50px;
+}
+
+.main-chat-section .chat .friend-message {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.chat .friend-message .info-message {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chat .friend-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat .friend-picture img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.chat .friend-message .info-message .date-message {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  transform: scale(0.8) translateX(-10px);
+  -webkit-transform: scale(0.8) translateX(-10px);
+  -moz-transform: scale(0.8) translateX(-10px);
+  -ms-transform: scale(0.8) translateX(-10px);
+  -o-transform: scale(0.8) translateX(-10px);
+}
+
+.chat .friend-message .the-message {
+  background-color: #007aff;
+  color: #fff;
+  padding: 20px 30px;
+  width: 400px;
+  border-radius: 6px 6px 6px 0;
+  -webkit-border-radius: 6px 6px 6px 0;
+  -moz-border-radius: 6px 6px 6px 0;
+  -ms-border-radius: 6px 6px 6px 0;
+  -o-border-radius: 6px 6px 6px 0;
+  margin-bottom: 50px;
+}
+
+.send-message-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.send-message-container {
+  background-color: #ebebeb;
+  padding: 0 20px;
+  user-select: none;
+}
+
+.send-message-container .send-input {
+  width: 100%;
+}
+
+.send-message-container .send-input input {
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--text-color);
+  width: 100%;
+  padding: 20px 0;
+}
+
+.send-message-container .send-input input:focus {
+  outline: none;
+}
+
+.send-message-container .options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 10px;
+}
+
+.send-message-container .options i {
+  font-size: 18px;
+  color: #8f8f8f;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.send-message-container .options i:hover {
+  color: #000;
+}
+
+.send-message-container .options i.send-message {
+  background-color: #007aff;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  padding-right: 3px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-message-container .options i.send-message:hover {
+  opacity: .8;
+}
+
+/* chat-section [End] */
+
+
+
+
+
+
+
+
+/* friend profile section [Start] */
+
+.friend-profile-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 10px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+
+@media (max-width: 376px) {
+  .friend-profile-section {
+    width: 100%;
+  }
+}
+
+.friend-profile-section .close {
+  align-self: flex-end;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.friend-profile-section .user-info .friend-picture {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
+  user-select: none;
+}
+
+.friend-profile-section .user-info .friend-picture::before {
+  content: '';
+  position: absolute;
+  right: 13px;
+  bottom: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.friend-profile-section .user-info .friend-picture.online::before {
+  background-color: #79e201;
+}
+
+.friend-profile-section .user-info .friend-picture img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.friend-profile-section .user-info .friend-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friend-profile-section .user-info .friend-info .friend-name {
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+.friend-profile-section .user-info .friend-info span {
+  color: #848484;
+  font-size: 15px;
+}
+
+.friend-profile-section .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.friend-profile-section .contact div {
+  display: flex;
+  gap: 20px;
+  margin-right: 100px;
+}
+
+.friend-profile-section .contact div i {
+  color: #848484;
+  width: 40px;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.friend-profile-section .contact div span {
+  color: #848484;
+  font-size: 16px;
+}
+
+.friend-profile-section .media .title {
+  font-weight: bold;
+  margin-right: 60px;
+}
+
+.friend-profile-section .media .pictures {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.friend-profile-section .media .pictures .img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+}
+
+.friend-profile-section .media .pictures .img.more::before {
+  content: '6+';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-profile-section .media .pictures .img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+/* friend profile section [End] */

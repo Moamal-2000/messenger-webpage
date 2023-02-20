@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Message</title>
+  <!-- Description -->
+  <meta name="description" content="Frontend only, webpage messenger">
+  <!-- Main css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/5a1527845b.js" crossorigin="anonymous"></script>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <section class="friends-section">
+      <div class="settings">
+        <h1 class="name-website"><a href="#">WEHELP</a></h1>
+        <div class="icons">
+          <i class="fa-solid fa-circle-plus"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <i class="fa-solid fa-xmark close"></i>
+        </div>
+      </div>
+
+      <div class="search-input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search Here...">
+      </div>
+
+      <div class="more-options">
+        <i class="fa-solid fa-clock-rotate-left active"></i>
+        <i class="fa-solid fa-user-group"></i>
+        <i class="fa-regular fa-address-book"></i>
+        <i class="fa-regular fa-calendar"></i>
+      </div>
+
+      <div class="friends-menu">
+        <div class="friend online">
+          <div class="container">
+            <div class="friend-picture">
+              <img src="https://thedreamwithinpictures.com/wp-content/uploads/2014/03/d971d__portrait-photography.jpg"
+                alt="">
+            </div>
+            <div class="content">
+              <span class="friend-name">Richards Hendrics</span>
+              <span class="last-message">Sup man, Wanna go out?</span>
+            </div>
+          </div>
+          <span class="number-of-messages">1</span>
+        </div>
+
+        <div class="friend online selected">
+          <div class="container">
+            <div class="friend-picture">
+              <img
+                src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+                alt="">
+            </div>
+            <div class="content">
+              <span class="friend-name">Elzabeth Nelson</span>
+              <span class="last-message">are you sure This isn't overdoing...</span>
+            </div>
+          </div>
+          <span class="number-of-messages"></span>
+        </div>
+
+        <div class="friend sleep">
+          <div class="container">
+            <div class="friend-picture">
+              <img src="https://mymodernmet.com/wp/wp-content/uploads/2021/01/morphy-me-celebrity-face-mashups-15.jpg"
+                alt="">
+            </div>
+            <div class="content">
+              <span class="friend-name">Jared Dunn</span>
+              <span class="last-message">I can't wait to hear All about the...</span>
+            </div>
+          </div>
+          <span class="number-of-messages">3</span>
+        </div>
+
+        <div class="friend dont-disturb">
+          <div class="container">
+            <div class="friend-picture">
+              <img src="https://cdn.pixabay.com/photo/2021/04/05/12/39/man-6153298_960_720.jpg" alt="">
+            </div>
+            <div class="content">
+              <span class="friend-name">Gilfoyle</span>
+              <span class="last-message">it's, it's nothing.... just my imagin...</span>
+            </div>
+          </div>
+          <span class="number-of-messages">4</span>
+        </div>
+
+        <div class="friend online">
+          <div class="container">
+            <div class="friend-picture">
+              <img
+                src="https://images.ctfassets.net/f2uoy79ix7lt/6lM9ieIXuerH3KT1APgCAg/39d858e30346825b511385a6e9f5a25d/avc-mpg-face-shapes-and-beard-styles-goatee.jpg"
+                alt="">
+            </div>
+            <div class="content">
+              <span class="friend-name">Dinesh</span>
+              <span class="last-message">Typing...</span>
+            </div>
+          </div>
+          <span class="number-of-messages"></span>
+        </div>
+
+        <div class="friend offline">
+          <div class="container">
+            <div class="friend-picture">
+              <img src="https://www.spring.org.uk/images/wide-face.jpg" alt="">
+            </div>
+            <div class="content">
+              <span class="friend-name">Big Head</span>
+              <span class="last-message">wish i could always help out.</span>
+            </div>
+          </div>
+          <span class="number-of-messages"></span>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="main-chat-section">
+      <div class="top-side">
+        <div class="selected-friend">
+          <i class="fa-solid fa-bars"></i>
+          <span class="state online"></span>
+          <h2 class="friend-name">Elizabeth Nelson</h2>
+        </div>
+        <div class="call-options">
+          <i class="fa-solid fa-phone"></i>
+          <i class="fa-solid fa-video"></i>
+        </div>
+      </div>
+
+      <section class="chat">
+        <div class="test-messages">
+
+          <div class="user-message">
+            <div class="info-message">
+              <div class="user-picture">
+                <img src="#" alt="">
+              </div>
+              <span class="date-message">10.35AM</span>
+            </div>
+            <p class="the-message">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam,
+            </p>
+          </div>
+
+          <div class="friend-message">
+            <div class="info-message">
+              <div class="friend-picture">
+                <img src="https://cdn.pixabay.com/photo/2021/04/25/14/30/man-6206540_1280.jpg" alt="">
+              </div>
+              <span class="date-message">10.35AM</span>
+            </div>
+            <p class="the-message">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam,
+              consequuntur adipisci, voluptatum
+            </p>
+          </div>
+
+          <div class="user-message">
+            <div class="info-message">
+              <div class="user-picture">
+                <img src="#" alt="">
+              </div>
+              <span class="date-message">10.35AM</span>
+            </div>
+            <p class="the-message">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam,
+            </p>
+          </div>
+
+          <div class="friend-message">
+            <div class="info-message">
+              <div class="friend-picture">
+                <img src="https://cdn.pixabay.com/photo/2021/04/25/14/30/man-6206540_1280.jpg" alt="">
+              </div>
+              <span class="date-message">10.35AM</span>
+            </div>
+            <p class="the-message">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam,
+              consequuntur adipisci, voluptatum
+            </p>
+          </div>
+
+          <div class="user-message">
+            <div class="info-message">
+              <div class="user-picture">
+                <img src="#" alt="">
+              </div>
+              <span class="date-message">10.35AM</span>
+            </div>
+            <p class="the-message">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam,
+            </p>
+          </div>
+
+          <div class="friend-message">
+            <div class="info-message">
+              <div class="friend-picture">
+                <img src="https://cdn.pixabay.com/photo/2021/04/25/14/30/man-6206540_1280.jpg" alt="">
+              </div>
+              <span class="date-message">10.35AM</span>
+            </div>
+            <p class="the-message">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam,
+              consequuntur adipisci, voluptatum
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <div class="send-message-container">
+        <div class="send-input">
+          <input type="text" placeholder="Type your message here...">
+        </div>
+
+        <div class="options">
+          <i class="fa-regular fa-face-smile-beam"></i>
+          <i class="fa-solid fa-paperclip"></i>
+          <i class="fa-regular fa-paper-plane send-message"></i>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="friend-profile-section">
+      <i class="fa-solid fa-xmark close"></i>
+
+      <div class="user-info">
+        <div class="friend-picture online">
+          <img
+            src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            alt="">
+        </div>
+
+        <div class="friend-info">
+          <h3 class="friend-name">Elizabeth Nelson</h3>
+          <span>Founder, Avn</span>
+          <span>"Bachmanity"</span>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div>
+          <i class="fa-regular fa-compass"></i>
+          <span class="location">Manchester, England</span>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span class="mobile-number">999-999-999</span>
+        </div>
+
+        <div>
+          <i class="fa-regular fa-envelope"></i>
+          <span class="email">elezabeth@avn.com</span>
+        </div>
+      </div>
+
+      <div class="media">
+        <span class="title">Media</span>
+        <div class="pictures">
+          <div class="img">
+            <img
+              src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt="">
+          </div>
+
+          <div class="img">
+            <img
+              src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt="">
+          </div>
+
+
+          <div class="img">
+            <img
+              src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt="">
+          </div>
+
+          <div class="img more">
+            <img
+              src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+              alt="">
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
